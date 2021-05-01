@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: large;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 6px;
+}
+
+header {
+  /*display: flex;
+  flex-wrap: wrap;*/
+  
+  padding: 30px;
+  text-align: center;
+}
+
+header p {
+  text-align: center;
+}
+
+/*
+#main_logo {
+  flex: 50%;
+  border-radius: 0px;
+  padding: 10px;
+}
+
+#header_text {
+  flex: 50%;
+  text-align: right;
+  padding: 25px;
+}*/
+
+#name {
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+/*Old stuff*/
+nav {
+  display: flex;
+  background-color: #333;
+}
+
+nav a { 
+  color: white;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+}
+
+#gh_logo {
+  text-align: center;
+  padding: 10px 15px 5px 15px;
+}
+
+nav img {
+  width: 30px;
+}
+
+nav a:hover {
+  color: black;
+  background-color: #ddd;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Arial';
+}
+/*END old stuff*/
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+figure {
+  margin: 10px;
+  border: 2px #333 solid;
+  border-radius: 6px;
+  padding: 20px 20px 5px 20px;
+}
+
+main {
+  flex: 60%;
+  padding: 20px;
+}
+
+main p {
+  text-align: justify;
+}
+
+aside {
+  flex: 20%;
+  max-width: 20%;
+  padding: 20px;
+  background-color: #f1f1f1;
+}
+
+footer {
+  /*display: flex;*/
+  margin: 0;
+  padding: 10px;
+  color: white;
+  background-color: #333;
+}
+
+footer a {
+  color: rgb(189, 212, 255);
+  padding: 0;
+}
+
+footer p {
+  text-align: center;
+}
+
+/*
+#angel-contact, #ean-contact {
+  flex-direction: row;
+  align-content: center;
+}
+
+#seperator {
+  flex-direction: row;
+  align-content: center;
+  padding: 0, 10px;
+}
+*/
+
+@media screen and 
+(max-width: 720px) {
+  header, .content {
+    flex-direction: column;
+  }
+  aside {
+    max-width: 100%;
+  }
+}
+
+@media only screen 
+and (max-width: 510px) {
+  body {
+    font-size: large;
+  }
+  header, .content {
+    flex-direction: column;
+  }
+  #top-contact {
+    display: none;
+  }
+  nav {
+    flex-direction: column;
+  }
+  nav a {
+    padding: 6%; 
+  }
+  aside { 
+    max-width: 100%;
+  }
+  /*
+  #angel-contact, #ean-contact {
+    flex-direction: column;
+    padding: 10px;
+  }
+  #seperator {
+    display: none;
+  }
+  */
+}
