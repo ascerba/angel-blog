@@ -23,6 +23,10 @@ main {
   padding: 0 20% 0 20%;
 }
 
+main p {
+  text-align: justify;
+}
+
 footer {
   margin-top: 20px;
   padding: 10px;
