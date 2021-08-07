@@ -125,7 +125,6 @@ h2 {
   }
   .tile3 {
     flex-direction: column;
-    padding: 0 10% 0 10%;
   }
   .tile3 hr {
     min-width: 80%;
