@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+img {
+  max-width: 100%;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   font-size: large;
@@ -14,8 +18,7 @@ body {
 header {
   padding: 10px;
   margin-bottom: 20px;
-  /*background-image: url("https://alexscerba.com/Media/Detroit/Canada.jpg");*/
-  background-color: black;
+  background-image: url("Media/CitySkyline.jpg");
   background-size: 100% auto;
   background-position: center;
 }
@@ -31,11 +34,11 @@ main p {
 footer {
   margin-top: 20px;
   padding: 10px;
-  background-color: rgb(48, 48, 48);
+  background-color: rgb(00, 80, 80);
   text-align: center;
 }
 
-footer p, a {
+footer p {
   color: rgb(156, 156, 156);
 }
 
@@ -73,6 +76,10 @@ nav a:hover {
   display: none;
 }
 
+a {
+  color: rgb(156, 156, 156);
+}
+
 h1 {
   text-align: center;
   margin-bottom: 20px;
@@ -83,8 +90,21 @@ h2 {
   margin: 0;
 }
 
+hr {
+  max-width: 50%;
+  border-top: 5px black solid;
+  margin-bottom: 20px;
+}
+
 article {
-  padding: 15px;
+  padding: 0 20px;
+  margin: 0 5px;
+}
+
+figure {
+  width: 300px;
+  float: left;
+  margin: 0 20px 20px 0;
 }
 
 .tile3 {
@@ -95,21 +115,12 @@ article {
 .tile3 article {
   flex: 25%;
   max-width: auto;
+  border: 2px black solid;
+  border-radius: 8px;
 }
 
 .tile3 img {
   max-width: 100%;
-}
-
-.tile3 hr {
-  border-top: none;
-  border-left: 2px black solid;
-}
-
-.h2bar {
-  max-width: 50%;
-  border-top: 5px black solid;
-  margin-bottom: 35px;
 }
 
 #top_info {
@@ -121,6 +132,12 @@ article {
   font-size: 2em;
   font-weight: bold;
   color: rgb(255, 248, 240);
+  text-decoration: none;
+}
+
+#name a {
+  color: rgb(255, 248, 240);
+  text-decoration: none;
 }
 
 #top_info p {
@@ -146,11 +163,20 @@ article {
     border-top: 2px black solid;
     border-left: none;
   }
+  .tile3 article {
+    margin: 5px 0px;
+  }
 }
 
-@media screen and (max-width: 800px) {
+@media all and (max-width: 750px) {
   main {
     padding: 0 5% 0 5%;
+  }
+  figure {
+    width: auto;
+    max-width: 50%;
+    margin: 20px auto;
+    float: none;
   }
   .regular_nav {
     display: none;
@@ -160,16 +186,16 @@ article {
     position: fixed;
     bottom: 30px;
     left: 30px;
-    background-color: rgb(64, 64, 231);
+    background-color: rgb(00, 80, 80);
     color: rgb(255, 248, 240);
     padding: 10px;
     border: 2px rgb(255, 248, 240) solid;
-    border-radius: 10px;
+    border-radius: 2px;
     box-shadow: 0 0 1px 1px rgba(0,0,0,0.5);
     cursor: pointer;
   }
   .dropdown_button:hover, .dropdown_button:focus {
-    background-color: rgb(124, 124, 236);
+    background-color: rgb(00, 100, 100);
   }
   .dropdown_nav {
     position: relative;
@@ -190,15 +216,21 @@ article {
     display: block;
     background-color: gray;
     border: 2px rgb(255, 248, 240) solid;
-    border-radius: 10px;
+    border-radius: 2px;
     box-shadow: 0 0 1px 1px rgba(0,0,0,0.5);
   }
   .dropdown_content a:hover {
     background-color: rgb(153, 153, 153);
     border: 2px rgb(255, 248, 240) solid;
-    border-radius: 10px;
+    border-radius: 2px;
   }
   .show {
     display: block;
+  }
+}
+
+@media all and (max-width: 650px) {
+  figure {
+    max-width: 80%;
   }
 }
