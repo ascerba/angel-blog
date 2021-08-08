@@ -12,12 +12,21 @@
   <body>
     <header>
       <nav>
-        <ul>
+        <ul class="regular_nav">
           <li><a href="index.html">Home</a></li>
           <li><a href="html/blog.html">Blog</a></li>
           <li><a href="html/book-reviews.html">Book Reviews</a></li>
           <li><a href="html/about.html">About</a></li>
         </ul>
+        <div class="dropdown_nav">
+          <button onclick="navToggle()" class="dropdown_button">Menu</button>
+          <div id="dropdown" class="dropdown_content">
+            <a href="html/about.html">About</a>
+            <a href="html/book-reviews.html">Book Reviews</a>
+            <a href="html/blog.html">Blog</a>
+            <a href="index.html">Home</a>
+          </div>
+        </div>
       </nav>
       <div id="top_info">
         <span id="name">Ángel Castañeda</span>
@@ -52,7 +61,7 @@
     </main>
     <footer>
       <nav>
-        <ul>
+        <ul class="regular_nav">
           <li><a href="index.html">Home</a></li>
           <li><a href="html/blog.html">Blog</a></li>
           <li><a href="html/book-reviews.html">Book Reviews</a></li>
@@ -63,5 +72,6 @@
         <p>By Ángel Castañeda 2021</p>
       </div>
     </footer>
+    <script src="nav.js"></script>
   </body>
 </html>
