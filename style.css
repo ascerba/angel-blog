@@ -83,6 +83,10 @@ h2 {
   margin: 0;
 }
 
+article {
+  padding: 15px;
+}
+
 .tile3 {
   display: flex;
   flex-wrap: wrap;
@@ -91,7 +95,6 @@ h2 {
 .tile3 article {
   flex: 25%;
   max-width: auto;
-  padding: 15px;
 }
 
 .tile3 img {
