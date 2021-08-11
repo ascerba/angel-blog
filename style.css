@@ -183,6 +183,9 @@ figure {
 }
 
 @media all and (max-width: 750px) {
+  header {
+    background-size: auto 128%;
+  }
   main {
     padding: 0 5% 0 5%;
   }
