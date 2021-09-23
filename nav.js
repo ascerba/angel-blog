@@ -13,3 +13,16 @@ window.onclick = function(event) {
     }
   }
 }
+
+function scrollFunction() {
+  var declaration = document.getElementById("sticky_nav").style;
+  var content = document.getElementById("content");
+  if (content.clientWidth > 733 && (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200)) {
+    declaration.display = "inline-block";
+  } else {
+    declaration.display = "none";
+  }
+}
+window.onscroll = function() {
+  scrollFunction()
+};
