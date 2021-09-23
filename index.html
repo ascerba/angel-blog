@@ -5,20 +5,28 @@
     <meta name="author" content="Ángel Castañeda" />
     <meta name="description" content="Angel's personal website." />
     <meta name="viewport" content="width-device-width, initial-scale=1" />
-    <title>Ángel Castañeda</title>
+    <title>Home - Ángel Castañeda</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="HaloLogo.ico" type="image/x-icon" />
   </head>
   <body>
-    <div class="content">
+    <div id="content">
       <header>
         <nav>
-          <ul class="regular_nav">
+          <ul id="regular_nav">
             <li><a href="index.html">Home</a></li>
             <li><a href="html/blog.html">Blog</a></li>
             <li><a href="html/book-reviews.html">Book Reviews</a></li>
             <li><a href="html/about.html">About</a></li>
           </ul>
+          <div id="sticky_nav">
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="book-reviews.html">Book Reviews</a></li>
+              <li><a href="about.html">About</a></li>
+            </ul>
+          </div>
           <div class="dropdown_nav">
             <button onclick="navToggle()" class="dropdown_button">Menu</button>
             <div id="dropdown" class="dropdown_content">
