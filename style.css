@@ -24,7 +24,8 @@ body {
 }
 
 header {
-  padding: 10px 10px 50px 10px;
+  padding-top: 100px;
+  padding-bottom: 50px;
   background-image: url("Media/OceanView.jpg");
   background-size: 100% auto;
   background-position: center;
@@ -49,24 +50,68 @@ footer {
 footer p {
   color: rgb(156, 156, 156);
 }
+.action{
+  margin: 0;
+  padding: 0;
+  background-color: rgb(00, 80, 80);
+  display: inline-block;
+  position: fixed;
+  min-width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.action span {
+  display: none;
+}
+
+.action ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.action ul li a {
+  margin: 0;
+  padding: 20px;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.action ul li {
+  margin: 5px;
+  border-radius: 2px;
+}
+
+.action ul li:hover {
+  background-color: #ddd;
+}
+
+.action ul li a:hover {
+  color: black;
+}
+
 
 nav {
   margin: 0;
   text-align: center;
 }
 
-nav ul {
+.bottom-nav ul {
   list-style: none;
   padding: 0;
   display: flex;
   justify-content: space-around;
 }
 
-nav li {
+.bottom-nav li {
   display: inline-block;
 }
 
-nav a {
+.bottom-nav a {
   font-weight: normal;
   padding: 8px;
   margin: 0;
@@ -75,22 +120,9 @@ nav a {
   border: 1px transparent solid;
 }
 
-nav a:hover {
+.bottom-nav a:hover {
   border: 1px rgb(255, 248, 240) solid;
   border-radius: 2px;
-}
-
-.dropdown_nav {
-  display: none;
-}
-
-#sticky_nav {
-  display: none;
-  position: fixed;
-  left: 0;
-  top: 0;
-  min-width: 100%;
-  background-color:rgb(00, 80, 80);
 }
 
 a {
@@ -206,6 +238,9 @@ figcaption {
 }
 
 @media all and (max-width: 750px) {
+  header {
+    padding: 0;
+  }
   main {
     padding: 40px 5%;
   }
@@ -215,54 +250,60 @@ figcaption {
     margin: 20px auto;
     float: none;
   }
-  #regular_nav {
-    display: none;
-  }
-  .dropdown_button {
-    font-size: 18px;
+
+  .action {
+    min-width: auto;
     position: fixed;
-    bottom: 30px;
-    left: 30px;
-    background-color: rgb(00, 80, 80);
-    color: rgb(255, 248, 240);
-    padding: 10px;
-    border: 2px rgb(255, 248, 240) solid;
-    border-radius: 2px;
-    box-shadow: 0 0 1px 1px rgba(0,0,0,0.5);
+    top: auto;
+    bottom: 25px;
+    left: 25px;
+    width: 53px;
+    height: 53px;
     cursor: pointer;
+    background: rgb(00, 80, 80);
+    border-radius: 50%;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.1);
   }
-  .dropdown_button:hover, .dropdown_button:focus {
-    background-color: rgb(00, 100, 100);
-  }
-  .dropdown_nav {
+  .action span {
     position: relative;
-    display: inline-block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2em;
+    transition: 0.3s ease-in-out
   }
-  .dropdown_content {
-    display: none;
-    position: fixed;
-    bottom: 80px;
-    left: 30px;
-    z-index: 1;
+  .action.active span {
+    transform: rotate(180deg);
   }
-  .dropdown_content a {
-    color: color;
-    padding: 10px;
-    margin-top: 5px;
-    text-decoration: none;
-    display: block;
-    background-color: gray;
-    border: 2px rgb(255, 248, 240) solid;
-    border-radius: 2px;
-    box-shadow: 0 0 1px 1px rgba(0,0,0,0.5);
+  .action ul {
+    position: absolute;
+    left: 0px;
+    bottom: 25px;
+    background: rgb(00, 80, 80);
+    min-width: 150px;
+    padding: 0;
+    border-radius: 5px;
+    opacity: 0;
+    display: inline;
+    visibility: hidden;
+    transition: 0.3s;
   }
-  .dropdown_content a:hover {
-    background-color: rgb(153, 153, 153);
-    border: 2px rgb(255, 248, 240) solid;
-    border-radius: 2px;
+  .action.active ul {
+    bottom: 65px;
+    opacity: 1;
+    visibility: visible;
+    transition: 0.3s;
   }
-  .show {
-    display: block;
+  .action ul li {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 5px;
   }
 }
 
