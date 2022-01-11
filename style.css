@@ -50,6 +50,11 @@ footer {
 footer p {
   color: rgb(156, 156, 156);
 }
+
+.intent-p p {
+  padding-left: 20px;
+}
+
 .action{
   margin: 0;
   padding: 0;
