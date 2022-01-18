@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-
 * {
   box-sizing: border-box;
 }
@@ -18,52 +16,71 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 100%;
   margin: 0;
-  background-color: rgb(255, 248, 240);
   display: flex;
   flex-direction: column;
 }
 
 header {
-  padding-top: 100px;
-  padding-bottom: 50px;
-  background-image: url("Media/OceanView.jpg");
-  background-size: 100% auto;
-  background-position: center;
-  background-repeat: no-repeat;
+  padding: 50px;
 }
 
 main {
-  padding: 40px 10%;
+  padding: 20px 10% 40px 10%;
 }
 
 main p {
   text-align: justify;
 }
 
+.welcome {
+  font-family: 'Lucidia', serif;
+  font-size: 60px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 0 100px 20%;
+}
+
+.welcome p {
+  margin: 0;
+}
+
+.welcome h1 {
+  text-align: left;
+  font-size: 100%;
+  font-family: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  line-height: inherit;
+  vertical-align: baseline;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
 footer {
   padding: 10px;
-  background-color: rgb(00, 80, 80);
+  background-color: rgb(90, 90, 90);
   text-align: center;
   flex-shrink: 0;
 }
 
 footer p {
-  color: rgb(156, 156, 156);
+  color: rgb(206, 206, 206);
 }
 
 .intent-p p {
   padding-left: 20px;
 }
 
-.action{
+.action {
   margin: 0;
-  padding: 0;
-  background-color: rgb(00, 80, 80);
+  padding-top: 10px;
   display: inline-block;
   position: fixed;
   min-width: 100%;
   top: 0;
   left: 0;
+  background-color: white;
 }
 
 .action span {
@@ -78,21 +95,27 @@ footer p {
   padding: 0;
 }
 
+.action ul li img {
+  vertical-align: middle;
+  height: 20px;
+}
+
 .action ul li a {
   margin: 0;
-  padding: 20px;
-  color: white;
+  padding: 10px;
+  color: black;
   text-decoration: none;
   display: inline-block;
 }
 
 .action ul li {
   margin: 5px;
-  border-radius: 2px;
+  border: 2px transparent solid;
 }
 
 .action ul li:hover {
-  background-color: #ddd;
+  border: 2px black solid;
+  border-radius: 6px;
 }
 
 .action ul li a:hover {
@@ -120,7 +143,7 @@ nav {
   font-weight: normal;
   padding: 8px;
   margin: 0;
-  color: rgb(255, 248, 240);
+  color: rgb(255, 255, 255);
   text-decoration: none;
   border: 1px transparent solid;
 }
@@ -178,7 +201,7 @@ figcaption {
   flex: 25%;
   margin: 0 5px;
   border: 2px black solid;
-  background-color: rgb(235, 235, 235);
+  background-color: rgb(231, 231, 231);
   box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.4);
   border-radius: 3px;
 }
@@ -193,23 +216,22 @@ figcaption {
 
 #top_info {
   text-align: center;
-  padding: 50px;
+  padding-top: 100px;
 }
 
 #name {
   font-size: 2em;
   font-weight: bold;
-  color: rgb(255, 248, 240);
   text-decoration: none;
 }
 
 #name a {
-  color: rgb(255, 248, 240);
+  color: black;
   text-decoration: none;
 }
 
 #top_info p {
-  color: rgb(255, 248, 240);
+  color: black;
 }
 
 #bottom_info {
@@ -218,7 +240,7 @@ figcaption {
 
 @media all and (max-width: 1500px) {
   main {
-    padding: 40px 5%;
+    padding: 20px 5% 40px 5%;
   }
 }
 
@@ -247,13 +269,18 @@ figcaption {
     padding: 0;
   }
   main {
-    padding: 40px 5%;
+    padding: 20px 5% 40px 5%;
   }
   figure {
     width: auto;
     max-width: 50%;
     margin: 20px auto;
     float: none;
+  }
+
+  .welcome {
+    font-size: 35px;
+    padding: 20px 0 100px 0;
   }
 
   .action {
@@ -264,10 +291,11 @@ figcaption {
     left: 25px;
     width: 53px;
     height: 53px;
+    padding: 0;
     cursor: pointer;
-    background: rgb(00, 80, 80);
+    background: white;
     border-radius: 50%;
-    box-shadow: 0 5px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 5px rgba(0,0,0,0.2);
   }
   .action span {
     position: relative;
@@ -276,7 +304,7 @@ figcaption {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: black;
     font-size: 2em;
     transition: 0.3s ease-in-out
   }
@@ -287,10 +315,11 @@ figcaption {
     position: absolute;
     left: 0px;
     bottom: 25px;
-    background: rgb(00, 80, 80);
-    min-width: 150px;
+    background: white;
+    min-width: 168px;
     padding: 0;
-    border-radius: 5px;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+    border-radius: 10px;
     opacity: 0;
     display: inline;
     visibility: hidden;
@@ -302,11 +331,11 @@ figcaption {
     visibility: visible;
     transition: 0.3s;
   }
+
   .action ul li {
     list-style: none;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    align-items: left;
     padding: 0;
     margin: 5px;
   }
