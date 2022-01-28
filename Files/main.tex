@@ -1,0 +1,204 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[shortlabels]{enumitem}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\graphicspath{{c:/Users/carbajal-castanedaa/Downloads/VectorField.png}}
+
+
+
+\begin{document}
+\flushright{\'Angel Casta\~neda}
+\begin{center}
+    Vector Analysis HW \#5
+    
+    Sections 15.1 $\&$ 15.2
+\end{center}
+\begin{enumerate}
+%1 answer checked w/ Dr. Genschaw     
+    \item Find the gradient vector field $\Vec{\nabla}f$ of $f(x,y,z)=x\cos{\frac{y}{z}}$.
+    \begin{align*}
+    &\Vec{\nabla}f=\langle f_x(x,y,z),f_y(x,y,z),f_z(x,y,z)\rangle\\
+\Aboxed{ &\Vec{\nabla}f=\left\langle \cos{\frac{y}{z}},\frac{-x}{z}\sin{\frac{y}{z}},\frac{xy}{z^2}\sin{\frac{y}{z}}\right\rangle}\\
+    \end{align*}
+
+%2 answer checked w/ Dr. Genschaw   
+    \item Evaluate the line integral $$\int_C xyz\, ds$$ where $C$ is described by $\Vec{r}(t)=\langle 2\sin{t},t,-2\cos{t}\rangle,0\le t\le \pi$.
+    $$\frac{d\Vec{r}}{dt}=\langle 2\cos{t}, 1, 2\sin t\rangle$$
+    \begin{align*}
+    \int_C xyz\, ds &=\int_a^b x(t)\cdot y(t)\cdot z(t)\cdot ||\Vec{r}\,'(t)||\,dt\\
+    &=\int_0^\pi (2\sin t)\cdot (t)\cdot (-2\cos t)\cdot \sqrt{(2\cos{t})^2+ 1^2+ (2\sin t)^2}\,dt\\
+    &=\int_0^\pi -4t\cos t\sin t\cdot \sqrt{4\cos^2{t}+ 1+ 4\sin ^2t}\,dt\\
+    &=\int_0^\pi -4t\cos t\sin t\cdot \sqrt{1+ 4(\cos^2{t}+ \sin ^2t)}\,dt\\
+    &=\int_0^\pi -4t\cos t\sin t\cdot \sqrt{5}\,dt\\
+    &=-4\sqrt{5}\int_0^\pi t\cos t\sin t\,dt\\
+    u=t \,\,&\, dv=\cos t\sin t\,dt\\
+    du=dt \,\,&\, v=\frac{1}{2}\sin ^2t\\
+    &=-4\sqrt{5}\left(\left.\frac{1}{2}t\sin ^2t\right|_0^\pi-\int_0^\pi \frac{1}{2}\sin ^2 t \, dt\right)\\
+    &=-4\sqrt{5}\left(\left(\frac{1}{2}\pi\sin ^2\pi\right)-\left(\frac{1}{2}0\sin ^20\right)-\int_0^\pi \frac{1}{2}\cdot \frac{1}{2}(1-\cos(2t))\, dt\right)\\
+    &=-4\sqrt{5}\left((0)-(0)-\frac{1}{4}\int_0^\pi (1-\cos(2t))\, dt\right)\\
+    &=-4\sqrt{5}\cdot -\frac{1}{4}\left[t+\frac{1}{2}\sin (2t)\right]_0^\pi\\
+    &=\sqrt{5}\left(\left(\pi+\frac{1}{2}\sin (2\pi)\right)-\left(0+\frac{1}{2}\sin (0)\right)\right)\\
+    &=\sqrt{5}\left(\left(\pi\right)-\left(0\right)\right)\\
+\Aboxed{\int_C xyz\, ds &=\pi\sqrt{5}}\\
+    \end{align*}
+
+%3 answer checked w/ Dr. Genschaw
+    \item  A thin wire is bent into the shape of a semicircle $x^2 + y^2=4, x\ge 0$. If the linear density function is a  constant $k$, find the mass of the wire.
+   
+Parametrization: 
+    $$\Vec{r}(t)=\langle 2\cos{t}, 2\sin{t}\rangle, \, -\frac{\pi}{2}\le t \le \frac{\pi}{2}$$
+    $$\frac{d\Vec{r}}{dt}=\langle -2\sin{t}, 2\cos{t}\rangle$$
+   
+Evaluating Line Integral: 
+\begin{align*}
+    M=\int_C \delta(x,y,z)\,ds &= \int_{a}^b k \cdot ||\Vec{r}\,'(t)||\,dt\\
+    &= \int_{-\frac{\pi}{2}}^\frac{\pi}{2} k \cdot \sqrt{(-2\sin{t})^2+(2\cos{t})^2}\,dt\\
+    &= \int_{-\frac{\pi}{2}}^\frac{\pi}{2} k \cdot \sqrt{4\sin^2{t}+4\cos^2{t}}\,dt\\
+    &= \int_{-\frac{\pi}{2}}^\frac{\pi}{2} k \cdot \sqrt{4(\sin^2{t}+\cos^2{t})}\,dt\\
+    &= \int_{-\frac{\pi}{2}}^\frac{\pi}{2} k \cdot \sqrt{4}\,dt\\
+    &= \int_{-\frac{\pi}{2}}^\frac{\pi}{2} k \cdot 2\,dt\\
+    &= 2k\int_{-\frac{\pi}{2}}^\frac{\pi}{2} 1\,dt\\
+    &= 2k\big[t\big]_{-\frac{\pi}{2}}^\frac{\pi}{2}\\
+    &= 2k\left(\frac{\pi}{2}-\frac{-\pi}{2}\right)\\
+    &= 2k\left(\frac{\pi}{2}+\frac{\pi}{2}\right)\\
+    \Aboxed{M=\int_C \delta(x,y,z)\,ds & =2\pi k}\\
+\end{align*}
+
+%4 answer checked w/ Dr. Genschaw   
+    \item Use a line integral to find the area of the surface that extends upward from the semicircle $y=\sqrt{4-x^2}$ in the $xy$-plane to the surface $z=x^2y$.
+Parametrization: 
+    $$\Vec{r}(t)=\langle 2\cos t, 2\sin t\rangle, \, 0\le t\le \pi$$
+    $$\frac{d\Vec{r}}{dt}=\langle -2\sin t,2\cos t\rangle$$
+    
+Evaluating Line Integral:
+    \begin{align*}
+        \int_C z \, ds &= \int_a^b x(t)^2\cdot y(t)\cdot ||\Vec{r}\,'(t)||\,dt\\
+    &= \int_0^\pi (2\cos t)^2\cdot (2\sin t)\cdot \sqrt{(-2\sin t)^2+(2\cos t)^2}\,dt\\
+    &= \int_0^\pi 4\cos^2 t\cdot 2\sin t\cdot \sqrt{4\sin^2 t+4\cos^2 t}\,dt\\
+    &= \int_0^\pi 8\cos^2t\sin t\cdot \sqrt{4(\sin^2 t+\cos^2 t)}\,dt\\
+    &= \int_0^\pi 16\cos^2t\sin t\cdot\,dt\\
+    u=\cos t \,&\,\, du= -\sin t\, dt\\
+    &= -16\int_1^{-1} u^2\,du\\
+    &= 16\int_{-1}^1 u^2\,du\\
+    &=16 \left[\frac{1}{3}u^3\right]_{-1}^1\\
+    &=\frac{16}{3} ((1)-(-1))\\
+\Aboxed {\int_C z\,ds & = \frac{32}{3} } \\
+\end{align*}
+%5 answers checked w/ Dr. Genschaw
+    \item Consider the vector field $\Vec{F}(x,y)=\langle x^2,-xy\rangle$ and $C$ to be the portion of the circle $x^2+y^2=1$ in the first quadrant traversed counterclockwise, graphed below (but like not really).
+%NEED THE GRAPH
+\includegraphic
+    \begin{enumerate}[(a)]
+        \item Would you guess that the line integral $\int_C\Vec{F}\cdot d\Vec{r}$ is positive, negative, or zero? Explain.
+        
+        I would guess negative. Near the beginning and end of the curve, it looks almost orthogonal, but the middle of the curve's flow seems to completely be going against the grain in the opposite direction of the vector field.
+        
+        \item Calculate the line integral to verify your educated guess in (a).
+        
+Parametrization: 
+        $$\Vec{r}(t)=\langle \cos t, \sin t \rangle,\, 0\le t\le \frac{\pi}{2}$$
+        $$\frac{d\Vec{r}}{dt}=\langle -\sin t, \cos t\rangle$$
+Evaluating Line Integral: 
+        \begin{align*}
+        \int_C \Vec{F}\cdot d\Vec{r}&=\int_a^b \Vec{F}(x(t),y(t))\cdot \Vec{r}\,'\,dt\\
+        &=\int_0^\frac{\pi}{2} \langle (\cos t)^2, -(\cos t)(\sin t)\rangle \cdot \langle -\sin t, \cos t\rangle \, dt\\
+        &=\int_0^\frac{\pi}{2} (-\cos^2 t\sin t+ -\cos^2 t\sin t )\, dt\\
+        &=2\int_0^\frac{\pi}{2} -\cos^2 t\sin t\,dt\\
+        u=\cos t &\,\,du=-\sin t \, dt\\
+        &=2\int_1^0 u^2 \,du\\
+        &=-2\int_0^1 u^2 \, du\\
+        &=-2\left[\frac{1}{3}u^3\right]_0^1\\
+        \Aboxed{\int_C \Vec{F}\cdot d\Vec{r} & =\frac{-2}{3}<0}\\
+        \end{align*}       
+
+    \end{enumerate}
+%6 answer checked w/ Dr. Genschaw
+    \item Evaluate the line integral $$\int_C \Vec{F}\cdot d\Vec{r}$$ where $\Vec{F}(x,y,z)=\langle \sin x,\cos y, xz \rangle$ and $C$ is given by $\Vec{r}(t)=\langle t^3,-t^2,t\rangle, \, 0\le t \le 1$. %<- this formatting sucksssss
+    $$\frac{d\Vec{r}}{dt}=\langle 3t^2, -2t, 1\rangle$$
+Evaluating Line Integral: 
+\begin{align*}
+    \int_C\Vec{F}\cdot d\Vec{r} &=\int_a^b \Vec{F}(x(t),y(t),z(t))\cdot \Vec{r}\,'\,dt\\
+    &=\int_0^1 \langle \sin(t^3),\cos(-t^2),(t^3\cdot t)\rangle \cdot \langle 3t^2, -2t, 1\rangle\,dt\\
+    &=\int_0^1  \left(3t^2\sin(t^3)+-2t\cos(-t^2)+t^4\right)\,dt\\
+    &=\left[-\cos (t^3)+\sin(-t^2)+\frac{1}{5}t^5\right]_0^1\\
+    &=\left(-\cos (1)+\sin(-1)+\frac{1}{5}\right)-\left(-\cos (0)\right)\\
+    &=-\cos (1)-\sin(1)+\frac{1}{5}+1\\
+\Aboxed{\int_C\Vec{F}\cdot d\Vec{r} &=-\cos (1)-\sin(1)+\frac{6}{5}}\\
+\end{align*}
+%7 answer checked w/ Dr. Genschaw
+    \item Show that a constant force field (i.e. $\Vec{F}(x,y)=\langle F_1,F_2\rangle$ for some constants $F_1$ and $F_2$) does zero work on a particle that moves once, traversed counterclockwise, around the circle $x^2 + y^2=1$. Is this also true for a force field $\Vec{F}(x,y)=\langle kx,ky \rangle$, where $k$ is a constant?
+
+Parametrization: 
+    $$\Vec{r}(t)=\langle \cos t,\sin t\rangle,\,0\le t\le 2\pi$$
+    $$\frac{d\Vec{r}}{dt}=\langle -\sin t, \cos t\rangle$$
+
+Evaluating Line Integral Where $\Vec{F}(x,y)=\langle F_1,F_2\rangle$:
+\begin{align*}
+    W=\int_C \Vec{F}\cdot d\Vec{r}&=\int_0^{2\pi} \langle F_1,F_2\rangle \cdot \langle -\sin t, \cos t\rangle \,dt\\
+    &= \int_0^{2\pi} \left(-F_1\sin t + F_2\cos t\right)\,dt\\
+    &= \left[F_1\cos t + F_2\sin t\right]_0^{2\pi}\\
+    &= \left(F_1\cos 2\pi + F_2\sin 2\pi\right)-\left(F_1\cos 0 + F_2\sin 0\right)\\
+    &= \left(F_1 + 0\right)-\left(F_1+ 0\right)\\
+    \Aboxed{W=\int_C \Vec{F}\cdot d\Vec{r}&=0}\\
+\end{align*}
+
+    Evaluating Line Integral Where $\Vec{F}(x,y)=\langle kx,ky\rangle$:
+\begin{align*}
+    W=\int_C \Vec{F}\cdot d\Vec{r}&=\int_0^{2\pi} \langle k\cos t,k\sin t\rangle \cdot \langle -\sin t, \cos t\rangle \,dt\\
+    &= \int_0^{2\pi} \left(-k\sin t\cos t + k\sin t\cos t\right)\,dt\\
+    &= \int_0^{2\pi} 0\,dt\\
+    \Aboxed{W=\int_C \Vec{F}\cdot d\Vec{r}&=0}\\
+\end{align*}    
+$$\boxed{\therefore \text{ the particle does zero work in both force fields.}}$$
+%8 answer checked w/ Dr. Genschaw.
+    \item Find the work done by the force field $\Vec{F}(x,y,z)=\langle y+z, x+z,x+y\rangle$ on a particle that moves along the line segment from $(1,0,0)$ to $(3,4,2)$.
+    
+Parametrization: 
+    $$\Vec{r}(t)=(1-t)\langle 1,0,0\rangle +t\langle 3,4,2 \rangle=\langle 1+2t,4t,2t\rangle ,\, 0\le t\le 1$$
+    
+Evaluating Line Integral:
+
+    $\Vec{F}$ is a conservative vector field that has a potential function $\varphi(x,y,z)=xy+xz+yz$.
+    \begin{align*}
+    W=\int_C \Vec{F}\cdot d\Vec{r}&=\varphi(3,4,2)-\varphi(1,0,0)\\
+    &= (12+8+6)-(0)\\
+\Aboxed{W=\int_C \Vec{F}\cdot d\Vec{r}&=26}\\
+    \end{align*}
+
+%9 NOT CHECKED YET
+    \item Find the work done by the force field $\Vec{F}(x,y,z)=\langle x+y, xy,-z^2\rangle$ on a particle that moves along the line segments from $(0,0,0)$ to $(1,3,1)$ to $(2,-1,4)$.
+    
+Parametrization:
+    $$\Vec{a}(t)=\langle t,3t,t\rangle,\, 0\le t\le 1 $$
+    $$\frac{d\Vec{a}}{dt}=\langle 1,3,1\rangle$$
+    $$\Vec{b}(t)=(1-t)\langle 1,3,1\rangle+t\langle 2,-1,4\rangle=\langle1+t,3-4t,1+3t\rangle,\,0\le t\le 1$$
+    $$\frac{d\Vec{b}}{dt}=\langle 1,-4,3\rangle$$
+
+Evaluating Line Integral:
+    \begin{align*}
+        W=\int_C \Vec{F}\cdot d\Vec{r}&=\int_{C_1} \Vec{F}\cdot d\Vec{a}+\int_{C_2} \Vec{F}\cdot d\Vec{b}\\
+        &=\int_0^1 \langle t+3t,3t\cdot t,-t^2\rangle\cdot \langle 1,3,1\rangle \,dt\\
+        &\hspace{0.5cm}+\int_0^1 \langle1+t+3-4t,(1+t)(3-4t),-(1+3t)^2\rangle\cdot \langle 1,-4,3\rangle\,dt\\
+        &=\int_0^1 \langle4t,3t^2,-t^2\rangle\cdot \langle 1,3,1\rangle \,dt\\
+        &\hspace{0.5cm}+\int_0^1 \langle4-3t,3-t-4t^2,-1-6t-9t^2\rangle\cdot \langle 1,-4,3\rangle\,dt\\
+        &=\int_0^1 (4t+9t^2-t^2)\,dt\\
+        &\hspace{0.5cm}+\int_0^1 ((4-3t)+(-12+4t+16t^2)+(-3-18t-27t^2))\,dt\\
+        &=\int_0^1 (4t+8t^2)\,dt+\int_0^1 (-11-17t-11t^2)\,dt\\
+        &=\int_0^1(-11-13t-3t^2)\,dt\\
+        &=\left[-11t-\frac{13}{2}t^2-t^3\right]_0^1\\
+\Aboxed{W=\int_C \Vec{F}\cdot d\Vec{r}&=-\frac{37}{2}}
+    \end{align*}
+%10 answer checked w/ Dr. Genschaw
+    \item Confirm that $\varphi (x,y)=ye^x+x\sin y$ is a potential function for $\Vec{F}(x,y)=\langle ye^x + \sin y, e^x +x\cos y \rangle$.
+    \begin{align*}
+    \Vec{\nabla}\varphi (x,y)&= \langle\varphi_x(x,y),\varphi_y(x,y)\rangle\\
+    &=\langle ye^x+\sin y,e^x+x\cos y\rangle\\
+\Aboxed{\Vec{\nabla}\varphi (x,y)&=\Vec{F}(x,y)}
+    \end{align*}
+
+\end{enumerate}
+
+\end{document}
