@@ -178,9 +178,8 @@ article {
 }
 
 figure {
-  width: 300px;
-  float: left;
-  margin: 20px 20px 20px 0;
+  width: 60%;
+  margin: 20px auto 20px auto;
   padding: 20px;
   background-color: white;
   border: 2px black solid;
@@ -188,8 +187,15 @@ figure {
   border-radius: 3px;
 }
 
+.left_figure {
+  width: 300px;
+  margin: 20px 20px 20px 0;
+  float: left;
+}
+
 figcaption {
   padding-top: 10px;
+  border-top: 2px solid black;
 }
 
 .tile3 {
@@ -271,7 +277,7 @@ figcaption {
   main {
     padding: 20px 5% 40px 5%;
   }
-  figure {
+  figure, .left_figure {
     width: auto;
     max-width: 50%;
     margin: 20px auto;
@@ -342,7 +348,7 @@ figcaption {
 }
 
 @media all and (max-width: 650px) {
-  figure {
+  figure, .left_figure {
     max-width: 80%;
   }
 }
