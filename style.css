@@ -217,7 +217,23 @@ figcaption {
 }
 
 .about_img {
+  max-width: 300px;
+  justify-content: flex-start;
   max-width: 30%;
+}
+
+.poem_tile {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.poem_image {
+  flex: 320px;
+}
+
+.poem {
+  font-style: italic;
+  flex: auto;
 }
 
 #content {
