@@ -1,0 +1,222 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                           Résumé Template
+%                          Designed By Ángel
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Change font size with this package
+    \documentclass[11pt]{article}
+    
+    %beginner package that does something important
+    \usepackage[utf8]{inputenc}
+
+    %For making margins normal; can adjust a bit to make cleaner
+    \usepackage[top=0.5in, bottom=0.5in, left=0.5in, right=0.5in]{geometry} 
+
+    %Gives us Times New Roman font as Computer Modern is not always accepted by recruiters (sorry Knuth)
+    \usepackage{times}
+
+    %Lets us do the hyperlink to linkedin and the mailto protocol for our email
+    \usepackage{hyperref}
+
+    %Lets us do our fancy nested lists
+    \usepackage{enumitem}
+
+%This package is handy for checking how close we are to margins with our text; remove % in front of line 24 to view and add back to have normal view back
+    %\usepackage{showframe}
+
+    %Gets rid of the page number at the bottom
+    \pagenumbering{gobble}
+
+    %command used for our header's triple item line
+    \newcommand\textbox[1]{%
+    \parbox{.333\textwidth}{#1}%
+    }
+
+    %Shortens indent for everything excluding the header and Section titles
+%NOTE: You will need to put multi-line entries in separate lines so there is no lack of indent on subsequent lines
+    \setlength{\parindent}{4pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                   Header
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{document}
+%Add name
+    \begin{center}\begin{Huge} \textbf{Your Name}\end{Huge}\end{center}
+
+    \vspace{-5mm}
+%Add top address and phone number
+    \noindent 123 Main St \hfill(123) 456-7890
+
+    \vspace{-1mm}
+%Add bottom address
+%Note: You need to fill in the YOURLINKEDIN in both portions of the \href function to get it properly working
+%Note: You will need to also do the same for the YOURMAIL@email.com at the end
+    \noindent\textbox{Town, ST 12345\hfill}\textbox{\hfil \href{https://linkedin.com/in/YOURLINKEDIN/}{linkedin.com/in/YOURLINKEDIN/} \hfil}\textbox{\hfill \href{mailto:YOURMAIL@email.com}{YOURMAIL@email.com}}
+%In case you don't have a linked in, uncomment (Get rid of the % in front) line 59 and comment (add % in front) line 57
+    %\noindent Town, ST 12345 \hfill \href{mailto:YOURMAIL@email.com}{YOURMAIL@email.com}
+
+    %Double line for header
+    \vspace{-3.5mm}
+    \noindent\hrulefill
+
+    \vspace{-4mm}
+    \noindent\hrulefill
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                               Summary/Objective
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \noindent\begin{Large}\textbf{\underline{Objective}:} \end{Large}
+    \vspace{1mm}
+    
+%Change Details to fit your field
+    Nth-year (your major) student with considerable work experience looking for a summer internship in 
+
+%be sure to separate text greater than one line with two enters to keep clean indents
+    (your field).
+
+    \vspace{2mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                   Education
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \noindent\begin{Large}\textbf{\underline{Education}:} \end{Large}
+    \vspace{1mm}
+
+%%%%%%%%%%%%%%                   University                    %%%%%%%%%%%%%%%%
+%fill this whole thing out    
+    \textbf{University of State} \hfill City, ST
+
+    B.A. Degree $\mid$ GPA: X.X \hfill Expected Month Year
+
+    \begin{itemize}[noitemsep,nolistsep]
+        \item Active member of the X club, Y sport, and Z society.
+    
+        \item President of K club from Month Year – Month Year
+    
+        \item Made dean's list for N semesters.
+    \end{itemize}
+
+%Add relevant classes
+    \textbf{\textit{Selected Coursework}:} Relevant class 1, relevant class 2, relevant class 3, and relevant class 4.
+    \vspace{1mm}
+
+%%%%%%%%%%%%%%%                  High School                %%%%%%%%%%%%%%%%%%%%
+%fill this whole thing out
+    \textbf{Hometown High School} \hfill Town, ST
+
+    Earned High School Diploma \hfill Month Year – Month Year
+
+    \begin{itemize}[noitemsep,nolistsep]
+%you can add new items to any list by using the \item command within the itemize environment
+        \item Participated in X club, Y sport, Z activity, A play, B band, and C society.
+    
+        \item Received honors from the XYZ Society and the ABC Award.
+    
+        \item Standardized Exams: Exam 1, exam 2, exam 3, and exam 4.
+    \end{itemize}
+
+    \vspace{2mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                               Work Experience
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent\begin{Large}\textbf{\underline{Work $\textbf{\&}$ Internship Experience}:} \end{Large}
+\vspace{1mm}
+
+%%%%%%%%%%%%%%%%                  Job 1                      %%%%%%%%%%%%%%%%%%
+%fill this whole thing out
+    \textbf{Job Position}, Company, City, ST \hfill Month Year – Present
+
+    \begin{itemize}[noitemsep,nolistsep]
+        \item Use X skill to do Y work.
+    
+        \item Manage N interns to do K project.
+    \end{itemize}
+    \vspace{1mm}
+
+%%%%%%%%%%%%%%%                    Internship                 %%%%%%%%%%%%%%%%%
+%fill this whole thing out
+    \textbf{Internship Position}, Company, City, ST \hfill Month Year – Month Year
+
+    \begin{itemize}[noitemsep,nolistsep]
+        \item Managed day-to-day X functions such as A, B, and C.
+    
+%added sub role for people that can partition one big responsibility into sub bullet points.
+        \item \textbf{Chair of Y Committee} \hfill Month Year – Month Year
+            \begin{itemize}[noitemsep,nolistsep]
+                \item[$\circ$] Organized the Y committee to do A.
+    
+                \item[$\circ$] Worked with other members to design B.
+            \end{itemize}
+    \end{itemize}
+    \vspace{1mm}
+    
+%%%%%%%%%%%%%%%%                  Job 2                      %%%%%%%%%%%%%%%%%%
+%fill this whole thing out
+    \textbf{Job Position}, Company, City, ST \hfill Month Year – Month Year
+
+    \begin{itemize}[noitemsep,nolistsep]
+        \item Use X skill to do Y work.
+    
+        \item Manage N interns to do K project.
+    \end{itemize}
+    \vspace{1mm}
+
+%%%%%%%%%%%%%%%%                    Job 3                    %%%%%%%%%%%%%%%%%%
+%fill this whole thing out
+    \textbf{Job Position}, Company, City, ST \hfill Month Year – Month Year
+
+    \begin{itemize}[noitemsep,nolistsep]
+        \item Used X skill to do Y work.
+    
+        \item Managed N interns to do K project.
+    \end{itemize}
+
+\vspace{2mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                Projects
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent\begin{Large}\textbf{\underline{Personal Projects}:} \end{Large}
+\vspace{1mm}
+
+%%%%%%%%%%%%%%%%                 Project 1                  %%%%%%%%%%%%%%%%%%%
+%fill this whole thing out
+    \textbf{Project 1} $\mid$ \href{https://link-to-project.com/}{link-to-project.com} \hfill Month Year – Present
+
+    \begin{itemize}[noitemsep,nolistsep]
+        \item Used X skill to organize this project.
+        \item Learned the importance of Y and implement Z in these types of projects now.
+    \end{itemize}
+    \vspace{1mm}
+
+%%%%%%%%%%%%%%%%                 Project 2                  %%%%%%%%%%%%%%%%%%%
+%fill this whole thing out
+    \textbf{Project 3} $\mid$ \href{https://link-to-project.com/}{link-to-project.com} \hfill Month Year – Month Year
+
+    \begin{itemize}[noitemsep,nolistsep]
+        \item Used X skill to organize this project.
+        \item Learned the importance of Y and implement Z in these types of projects now.
+    \end{itemize}
+    \vspace{1mm}
+
+%%%%%%%%%%%%%%%%                 Project 3                  %%%%%%%%%%%%%%%%%%%
+%fill this whole thing out
+    \textbf{Project 3} $\mid$ \href{https://link-to-project.com/}{link-to-project.com} \hfill Month Year – Month Year
+
+    \begin{itemize}[noitemsep,nolistsep]
+        \item Used X skill to organize this project.
+        \item Learned the importance of Y and implement Z in these types of projects now.
+    \end{itemize}
+    \vspace{1mm}
+
+\vspace{2mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                               Technical Skills
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \noindent\begin{Large}\textbf{\underline{Technical Skills}: } \end{Large}
+    \vspace{1mm}
+
+%be sure to only include hard skills like 'HTML' or 'MS Excel' instead of soft skills like 'leadership'
+    \textbf{Core Competencies}: \,Skill 1, skill 2, skill 3, and skill 4.
+
+    \textbf{Other Skills}: \,Skill 1, skill 2, skill 3, and skill 4.
+
+    \vspace{2mm}
+    \end{document}
